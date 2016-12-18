@@ -4,6 +4,7 @@ ENV DEBIAN_FRONTEND noninteractive
 ENV TERM xterm
 
 RUN     apt-get update 
+RUN	apt-get -y install gnupg
 RUN	echo 'deb http://www.linotp.org/apt/debian jessie linotp' >> /etc/apt/sources.list
 RUN	gpg --search-keys 913DFF12F86258E5
 RUN     gpg --keyserver keys.gnupg.net --recv-keys 913DFF12F86258E5
