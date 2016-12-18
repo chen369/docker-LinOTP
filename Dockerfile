@@ -9,7 +9,7 @@ RUN	echo 'deb http://www.linotp.org/apt/debian jessie linotp' >> /etc/apt/source
 RUN     gpg --keyserver keys.gnupg.net --recv-keys 913DFF12F86258E5
 RUN     gpg --export 913DFF12F86258E5 | apt-key add - 
 RUN	apt-get update
-RUN	apt-get -y install linotp linotp-useridresolver wget gpg python-ldap 
+RUN	apt-get -y install linotp linotp-useridresolver wget python-ldap 
 RUN     apt-get -y install linotp-smsprovider linotp-adminclient-cli linotp-adminclient-gui libpam-linotp
 	
 
